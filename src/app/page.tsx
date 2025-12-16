@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Stethoscope, UserHeart } from 'lucide-react';
+import { Stethoscope, Heart } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
             <Card className="transform hover:scale-105 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-2xl">
               <CardHeader className="items-center text-center">
                 <div className="p-4 bg-accent/10 rounded-full mb-4">
-                  <UserHeart className="h-10 w-10 text-accent" />
+                  <Heart className="h-10 w-10 text-accent" />
                 </div>
                 <CardTitle className="font-headline text-2xl">For Patients</CardTitle>
                 <CardDescription>
