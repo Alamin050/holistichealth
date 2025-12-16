@@ -1,3 +1,5 @@
+"use client";
+
 import { redirect } from 'next/navigation';
 import { AuthFormWrapper } from '@/components/shared/auth-form-wrapper';
 import { Button } from '@/components/ui/button';
