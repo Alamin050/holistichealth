@@ -78,6 +78,11 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      boxShadow: {
+        'neumorphic': 'var(--neumorphic-shadow)',
+        'neumorphic-inset': 'var(--neumorphic-shadow-inset)',
+        'neumorphic-sm': 'var(--neumorphic-shadow-sm)',
+      },
       keyframes: {
         'accordion-down': {
           from: {

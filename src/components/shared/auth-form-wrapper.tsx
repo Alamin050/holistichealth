@@ -18,9 +18,9 @@ export function AuthFormWrapper({
 }: AuthFormWrapperProps) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background p-4">
-      <Card className="w-full max-w-md shadow-2xl">
+      <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl font-bold font-headline text-primary">{title}</CardTitle>
+          <CardTitle className="text-3xl font-bold font-headline bg-gradient-to-br from-cyan-500 to-blue-600 bg-clip-text text-transparent">{title}</CardTitle>
         </CardHeader>
         <CardContent>
           {children}

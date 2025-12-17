@@ -19,23 +19,17 @@ type PageHeaderProps = {
 
 export function PageHeader({ title, subtitle }: PageHeaderProps) {
   return (
-    <header className="bg-card border-b p-4 sm:p-6">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className="bg-transparent p-4 sm:p-6 mb-8">
+      <div className="mx-auto flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-primary font-headline">{title}</h1>
-          <p className="text-sm text-muted-foreground">{subtitle}</p>
+          <h1 className="text-3xl font-bold font-headline bg-gradient-to-br from-cyan-500 to-blue-600 bg-clip-text text-transparent">{title}</h1>
+          <p className="text-md text-muted-foreground">{subtitle}</p>
         </div>
         <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" asChild>
-            <Link href="/">
-              <LogOut className="mr-2 h-4 w-4" />
-              Logout
-            </Link>
-          </Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-                <Avatar className="h-9 w-9">
+              <Button variant="ghost" className="relative h-12 w-12 rounded-full shadow-neumorphic p-0">
+                <Avatar className="h-11 w-11">
                   <AvatarImage src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Dr. Smith" />
                   <AvatarFallback>DS</AvatarFallback>
                 </Avatar>

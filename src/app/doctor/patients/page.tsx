@@ -35,9 +35,9 @@ const patients = [
 ];
 
 const statusStyles: { [key: string]: string } = {
-    RED: 'bg-red-100 text-red-800 border-red-200',
-    YELLOW: 'bg-yellow-100 text-yellow-800 border-yellow-200',
-    GREEN: 'bg-green-100 text-green-800 border-green-200',
+    RED: 'bg-red-500/20 text-red-700 border-red-500/30',
+    YELLOW: 'bg-yellow-500/20 text-yellow-700 border-yellow-500/30',
+    GREEN: 'bg-green-500/20 text-green-700 border-green-500/30',
 };
 
 export default function PatientsPage() {
@@ -47,10 +47,10 @@ export default function PatientsPage() {
         title="Patients"
         subtitle="A list of your current patients."
       />
-      <main className="flex-1 flex flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+      <main className="flex-1 flex flex-col">
         <Card>
           <CardHeader>
-            <CardTitle>Patients</CardTitle>
+            <CardTitle>Current Patients</CardTitle>
             <CardDescription>
               Manage your patients and view their triage status.
             </CardDescription>
@@ -58,7 +58,7 @@ export default function PatientsPage() {
           <CardContent>
             <Table>
               <TableHeader>
-                <TableRow>
+                <TableRow className="border-none">
                   <TableHead>Patient</TableHead>
                   <TableHead>Triage Status</TableHead>
                   <TableHead>Last Check-in</TableHead>
@@ -69,13 +69,13 @@ export default function PatientsPage() {
               </TableHeader>
               <TableBody>
                 {patients.map((patient) => (
-                    <TableRow key={patient.email}>
+                    <TableRow key={patient.email} className="border-t border-border">
                         <TableCell>
                             <div className="font-medium">{patient.name}</div>
                             <div className="text-sm text-muted-foreground">{patient.email}</div>
                         </TableCell>
                         <TableCell>
-                            <Badge className={statusStyles[patient.status]}>{patient.status}</Badge>
+                            <Badge variant="outline" className={statusStyles[patient.status]}>{patient.status}</Badge>
                         </TableCell>
                         <TableCell>
                             {patient.date}

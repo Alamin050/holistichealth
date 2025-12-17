@@ -8,7 +8,7 @@ export default function DoctorDashboardPage() {
         title="Doctor Dashboard"
         subtitle="Create and manage patient care protocols."
       />
-      <main className="flex-1 flex flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+      <main className="flex-1 flex flex-col">
         <ProtocolBuilder />
       </main>
     </>

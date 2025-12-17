@@ -77,29 +77,31 @@ export function ProtocolBuilder() {
 
   if (generatedProtocol) {
     return (
-      <Card className="max-w-2xl mx-auto shadow-lg">
+      <Card className="max-w-2xl mx-auto">
         <CardHeader>
-          <CardTitle className="font-headline text-2xl text-primary">Protocol Generated</CardTitle>
+          <CardTitle className="font-headline text-2xl text-primary bg-gradient-to-br from-cyan-500 to-blue-600 bg-clip-text text-transparent">Protocol Generated</CardTitle>
           <CardDescription>Share this QR code or link with the patient for them to get started.</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col items-center gap-6">
-          <div className="p-4 bg-white rounded-lg border">
-            <Image
-              src={generatedProtocol.qrCodeUrl}
-              alt="Patient Protocol QR Code"
-              width={250}
-              height={250}
-              priority
-              unoptimized
-            />
+          <div className="p-2 bg-background rounded-lg shadow-neumorphic-inset">
+            <div className="p-4 bg-white rounded-md">
+              <Image
+                src={generatedProtocol.qrCodeUrl}
+                alt="Patient Protocol QR Code"
+                width={220}
+                height={220}
+                priority
+                unoptimized
+              />
+            </div>
           </div>
-          <div className="w-full text-sm space-y-2">
+          <div className="w-full text-sm space-y-2 text-center">
             <p><strong>Patient:</strong> {generatedProtocol.patientName}</p>
             <p><strong>Hospital ID:</strong> {generatedProtocol.hospitalId}</p>
             <p><strong>Medicine:</strong> {generatedProtocol.medicine}</p>
           </div>
         </CardContent>
-        <CardFooter className="flex flex-col sm:flex-row gap-2">
+        <CardFooter className="flex flex-col sm:flex-row gap-4">
           <Button onClick={handleCopyToClipboard} className="w-full sm:w-auto">
             <ClipboardCopy /> Copy Link
           </Button>
@@ -112,7 +114,7 @@ export function ProtocolBuilder() {
   }
 
   return (
-    <Card className="max-w-2xl mx-auto shadow-lg">
+    <Card className="max-w-2xl mx-auto">
       <CardHeader>
         <CardTitle className="font-headline text-2xl">Protocol Builder</CardTitle>
         <CardDescription>Create a new care protocol and generate a patient QR code.</CardDescription>
@@ -120,7 +122,7 @@ export function ProtocolBuilder() {
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <FormField
                 control={form.control}
                 name="patientName"
