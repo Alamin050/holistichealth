@@ -130,7 +130,7 @@ export default function ProfilePage() {
             </CardContent>
         </Card>
         <Card>
-            <CardHeader>
+           <CardHeader>
                 <CardTitle>Notification Settings</CardTitle>
                 <CardDescription>Control how you receive alerts.</CardDescription>
             </CardHeader>
