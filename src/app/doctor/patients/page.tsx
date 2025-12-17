@@ -47,7 +47,7 @@ export default function PatientsPage() {
         title="Patients"
         subtitle="A list of your current patients."
       />
-      <main className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col">
         <Card>
           <CardHeader>
             <CardTitle>Current Patients</CardTitle>
@@ -101,7 +101,7 @@ export default function PatientsPage() {
             </Table>
           </CardContent>
         </Card>
-      </main>
+      </div>
     </>
   )
 }

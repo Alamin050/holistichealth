@@ -63,7 +63,7 @@ export default function ProfilePage() {
         title="Profile"
         subtitle="Manage your profile settings and preferences."
       />
-      <main className="flex-1 flex flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+      <div className="flex-1 flex flex-col gap-4 lg:gap-6">
         <Card>
             <CardHeader>
                 <CardTitle>Your Profile</CardTitle>
@@ -133,7 +133,7 @@ export default function ProfilePage() {
             <CardHeader>
                 <CardTitle>Notification Settings</CardTitle>
                 <CardDescription>Control how you receive alerts.</CardDescription>
-            </CardHeader>
+            </Header>
             <CardContent className="space-y-4">
                 <div className="flex flex-row items-center justify-between rounded-lg border p-4">
                     <div className="space-y-0.5">
@@ -151,7 +151,7 @@ export default function ProfilePage() {
                 </div>
             </CardContent>
         </Card>
-      </main>
+      </div>
     </>
   )
 }
