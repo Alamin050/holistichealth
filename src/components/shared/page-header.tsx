@@ -19,7 +19,7 @@ type PageHeaderProps = {
 
 export function PageHeader({ title, subtitle }: PageHeaderProps) {
   return (
-    <header className="bg-transparent p-4 sm:p-6 mb-8">
+    <header className="bg-transparent mb-8">
       <div className="mx-auto flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold font-headline bg-gradient-to-br from-cyan-500 to-blue-600 bg-clip-text text-transparent">{title}</h1>
